@@ -35,43 +35,46 @@ body {
 	Write your solution here!
    ========================== */
 
+body {
+  text-align: center;
+}
+
 .posts {
   display: flex;
   flex-flow: column wrap;
-  width: 90%;
-  margin: 0 auto;
+  align-items: center;
+  margin: 1em auto;
 }
 
 .post {
-  text-align: center;
-  width: 100%;
-  margin: 1em auto;
-  border-radius: 5%;
+  width: 90%;
+  margin: 1em;
+  border-radius: 2em;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.post-title {
-  order: 1;
-}
-
-.post-description {
-  order: 2;
+.post * {
+  margin: 1em;
 }
 
 img {
-  width: 60%;
+  width: 70%;
   object-fit: cover;
-  order: 3;
-  margin: 1em auto;
+  order: 1;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .posts {
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   .post {
-    width: 45%;
+    width: 40%;
+  }
+  img {
+    order: 0;
   }
 }
